@@ -4,6 +4,7 @@ export default guitars = [
     brand: "Martin",
     price: 3999.99,
     type: "acoustic",
+    image: "",
     shortDescription: "Legendary acoustic guitar.",
     longDescription:
       "The Martin D-28 is a classic acoustic guitar with a rich sound and warm tone. Ideal for musicians of all styles and genres.",
@@ -13,6 +14,7 @@ export default guitars = [
     brand: "Taylor",
     price: 1999.99,
     type: "acoustic",
+    image: "",
     shortDescription: "High-quality acoustic guitar.",
     longDescription:
       "The Taylor 314ce is a versatile acoustic guitar with a bright, balanced sound and comfortable playability. Perfect for songwriting and performing.",
@@ -22,6 +24,7 @@ export default guitars = [
     brand: "Gibson",
     price: 2499.99,
     type: "acoustic",
+    image: "",
     shortDescription: "Iconic acoustic guitar.",
     longDescription:
       "The Gibson J-45 is a classic acoustic guitar known for its warm, rich sound and timeless design. Ideal for folk and blues musicians.",
@@ -31,6 +34,7 @@ export default guitars = [
     brand: "Yamaha",
     price: 599.99,
     type: "acoustic",
+    image: "",
     shortDescription: "Affordable, quality acoustic guitar.",
     longDescription:
       "The Yamaha FG830 is an affordable acoustic guitar with a balanced, rich sound and excellent playability. Ideal for beginners and experienced players alike.",
@@ -40,6 +44,7 @@ export default guitars = [
     brand: "Seagull",
     price: 449.99,
     type: "acoustic",
+    image: "",
     shortDescription: "Quality acoustic guitar.",
     longDescription:
       "The Seagull S6 Original is a well-crafted acoustic guitar with a rich, balanced sound and comfortable playability. Perfect for a range of styles and genres.",
@@ -49,6 +54,7 @@ export default guitars = [
     brand: "Epiphone",
     price: 499.99,
     type: "acoustic",
+    image: "",
     shortDescription: "Affordable jumbo acoustic guitar.",
     longDescription:
       "The Epiphone EJ-200CE is a budget-friendly jumbo acoustic guitar with a warm, rich sound and easy playability. Ideal for musicians of all levels.",
@@ -58,6 +64,7 @@ export default guitars = [
     brand: "Takamine",
     price: 799.99,
     type: "acoustic",
+    image: "",
     shortDescription: "High-quality dreadnought acoustic guitar.",
     longDescription:
       "The Takamine GD71CE is a well-made dreadnought acoustic guitar with a balanced, powerful sound and excellent playability. Perfect for rock, country, and blues musicians.",
@@ -67,6 +74,7 @@ export default guitars = [
     brand: "Fender",
     price: 999.99,
     type: "electric",
+    image: "",
     shortDescription: "Classic electric guitar.",
     longDescription:
       "The Fender Stratocaster is a classic electric guitar with a fast, comfortable neck and versatile sound. Ideal for a range of musical styles.",
@@ -76,6 +84,7 @@ export default guitars = [
     brand: "Gibson",
     price: 1499.99,
     type: "electric",
+    image: "",
     shortDescription: "Legendary electric guitar.",
     longDescription:
       "The Gibson SG Standard is a legendary electric guitar with a fast, comfortable neck and powerful sound. Ideal for rock and metal musicians.",
@@ -85,6 +94,7 @@ export default guitars = [
     brand: "Epiphone",
     price: 499.99,
     type: "electric",
+    image: "",
     shortDescription: "Affordable electric guitar.",
     longDescription:
       "The Epiphone Les Paul Standard is a budget-friendly electric guitar with a warm, rich sound and versatile tone. Ideal for a range of musical styles.",
@@ -94,6 +104,7 @@ export default guitars = [
     brand: "Yamaha",
     price: 299.99,
     type: "electric",
+    image: "",
     shortDescription: "Affordable electric guitar.",
     longDescription:
       "The Yamaha Pacifica 112V is a budget-friendly electric guitar with a fast, comfortable neck and versatile sound. Ideal for a range of musical styles.",
@@ -103,6 +114,7 @@ export default guitars = [
     brand: "Fender",
     price: 799.99,
     type: "electric",
+    image: "",
     shortDescription: "Classic electric guitar.",
     longDescription:
       "The Fender Telecaster is a classic electric guitar with a fast, comfortable neck and versatile sound. Ideal for a range of musical styles.",
@@ -112,6 +124,7 @@ export default guitars = [
     brand: "Gibson",
     price: 1499.99,
     type: "electric",
+    image: "",
     shortDescription: "Legendary electric guitar.",
     longDescription:
       "The Gibson Les Paul is a legendary electric guitar with a warm, rich sound and versatile tone. Ideal for a range of musical styles.",
@@ -121,6 +134,7 @@ export default guitars = [
     brand: "Ibanez",
     price: 799.99,
     type: "electric",
+    image: "",
     shortDescription: "High-performance electric guitar.",
     longDescription:
       "The Ibanez RG 550 is a high-performance electric guitar with a fast, smooth neck and versatile sound. Ideal for metal and shred guitarists.",
@@ -130,6 +144,7 @@ export default guitars = [
     brand: "ESP",
     price: 999.99,
     type: "electric",
+    image: "",
     shortDescription: "Professional electric guitar.",
     longDescription:
       "The ESP LTD EC-1000 is a professional electric guitar with a solid construction and powerful sound. Ideal for metal, rock, and blues musicians.",
@@ -139,6 +154,7 @@ export default guitars = [
     brand: "PRS",
     price: 999.99,
     type: "electric",
+    image: "",
     shortDescription: "Stylish electric guitar.",
     longDescription:
       "The PRS SE Custom 24 is a stylish electric guitar with a warm, rich sound and versatile tone. Ideal for a range of musical styles.",
