@@ -13,10 +13,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/guitars/acoustic" element={<Guitars />} />
-        <Route path="/guitars/electric" element={<Guitars />} />
-        <Route path="/guitars/acoustic/:id" element={<Details />} />
-        <Route path="/guitars/electric/:id" element={<Details />} />
+        <Route path="acoustic" element={<Guitars />} />
+        <Route path="electric" element={<Guitars />} />
+        <Route path="acoustic/:id" element={<Details />} />
+        <Route path="electric/:id" element={<Details />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
