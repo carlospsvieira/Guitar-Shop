@@ -1,4 +1,4 @@
-export default guitars = [
+export const guitars = [
   {
     id: "0312",
     name: "Martin D-28",

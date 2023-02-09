@@ -1,17 +1,21 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import GuitarsList from "../components/GuitarsList";
+import GuitarList from "../components/GuitarList";
 
 function Guitars() {
   const location = useLocation();
   return (
     <div>
-      { location.pathname === "/acoustic" ? (
-        <h1 className="text-2xl">Acoustic Guitars</h1>
+      {location.pathname === "/acoustic" ? (
+        <div>
+          <h1 className="text-2xl">Acoustic Guitars</h1>
+        </div>
       ) : (
-        <h1 className="text-2xl">Electric Guitars</h1>
+        <div>
+          <h1 className="text-2xl">Electric Guitars</h1>
+        </div>
       )}
-      <GuitarsList />
+      <GuitarList />
     </div>
   );
 }
