@@ -10,10 +10,12 @@ function GuitarList() {
   console.log(guitarList);
 
   return (
-    <div>
-      <div>
+    <div className="m-2">
+      <div className="flex flex-wrap justify-center">
         {guitarList.map((guitar) => (
-          <p>{guitar.type}</p>
+          <div key={guitar.id} className="flex items-center">
+            <img src={guitar.image} alt="" className="w-[200px]"/>
+          </div>
         ))}
       </div>
     </div>

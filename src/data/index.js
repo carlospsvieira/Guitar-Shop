@@ -5,7 +5,7 @@ export const guitars = [
     brand: "Martin",
     price: 3999.99,
     type: "acoustic",
-    image: "https://cdn.webshopapp.com/shops/179375/files/369421737/image.jpg",
+    image: "https://cdn.mos.cms.futurecdn.net/h8DPgpcg4sMdc2fzAKHEBD.jpg",
     shortDescription: "Legendary acoustic guitar.",
     longDescription:
       "The Martin D-28 is a classic acoustic guitar with a rich sound and warm tone. Ideal for musicians of all styles and genres.",
@@ -88,7 +88,7 @@ export const guitars = [
     price: 999.99,
     type: "electric",
     image:
-      "https://www.lojaopenstage.com.br/upload/product/d4riMsuuP2HYRPMFmKCPFFlr29m8EZwitdzEwVUj.jpg",
+      "https://harmoniamusical.com.br/media/catalog/product/cache/7c65d8a16c1a9fa15447e0ab5eeb833b/g/u/guitarra-fender-mex-player-series-stratocaster-pf-014-4503-506-black.jpg",
     shortDescription: "Classic electric guitar.",
     longDescription:
       "The Fender Stratocaster is a classic electric guitar with a fast, comfortable neck and versatile sound. Ideal for a range of musical styles.",
@@ -147,7 +147,8 @@ export const guitars = [
     brand: "Gibson",
     price: 1499.99,
     type: "electric",
-    image: "",
+    image:
+      "https://d1aeri3ty3izns.cloudfront.net/media/21/210732/600/preview.jpg",
     shortDescription: "Legendary electric guitar.",
     longDescription:
       "The Gibson Les Paul is a legendary electric guitar with a warm, rich sound and versatile tone. Ideal for a range of musical styles.",
@@ -158,7 +159,7 @@ export const guitars = [
     brand: "Ibanez",
     price: 799.99,
     type: "electric",
-    image: "https://www.retrofret.com/images/9304_Guitar/xLarge/9304_01.jpg",
+    image: "https://static.sonovente.com/img/library/zoom/60/450/60369_1.jpg",
     shortDescription: "High-performance electric guitar.",
     longDescription:
       "The Ibanez RG 550 is a high-performance electric guitar with a fast, smooth neck and versatile sound. Ideal for metal and shred guitarists.",
