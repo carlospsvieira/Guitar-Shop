@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { guitars } from "../data";
 
 function GuitarList() {
@@ -18,6 +18,11 @@ function GuitarList() {
           </div>
         ))}
       </div>
+      { location.pathname === '/acoustic' ? (
+        <Link to="/electric" className="bg-red-400 rounded-md px-2 py-1">See our electric guitars</Link>
+      ) : (
+        <Link to="/acoustic" className="bg-sky-500 rounded-md px-2 py-1">See our acoustic guitars</Link>
+      )}
     </div>
   );
 }
