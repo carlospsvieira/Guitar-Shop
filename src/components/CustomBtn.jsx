@@ -3,14 +3,14 @@ import { Context } from "../context/AddProvider";
 
 function CustomBtn({ productId }) {
   const { cart, setCart } = useContext(Context);
-  const [btnText, setBtnText] = useState("Add 🛒");
+  const [btnText, setBtnText] = useState("Add");
 
   // changes btn text on click back and forth //
   const btnTextChange = () => {
-    if (btnText === "Add 🛒") {
-      setBtnText("Added 🛒");
+    if (btnText === "Add") {
+      setBtnText("Added");
     } else {
-      setBtnText("Add 🛒");
+      setBtnText("Add");
     }
   };
 

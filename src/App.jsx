@@ -6,7 +6,7 @@ import Details from "./pages/Details";
 import Guitars from "./pages/Guitars";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
-import Cart from "./components/Cart";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
