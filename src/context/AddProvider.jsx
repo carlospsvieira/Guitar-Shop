@@ -3,14 +3,14 @@ import { createContext, useMemo, useState } from "react";
 export const Context = createContext();
 
 function AddProvider({ children }) {
-  const [addBtn, setAddBtn] = useState("+Cart");
+  const [cart, setCart] = useState([]);
 
   const value = useMemo(
     () => ({
-      addBtn,
-      setAddBtn,
+      cart,
+      setCart,
     }),
-    [addBtn, setAddBtn]
+    [cart, setCart]
   );
 
   return <Context.Provider value={value}>{children}</Context.Provider>

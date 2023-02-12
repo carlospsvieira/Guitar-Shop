@@ -26,7 +26,7 @@ function GuitarList() {
               >
                 View Guitar
               </Link>
-              <CustomBtn />
+              <CustomBtn productId={guitar.id} />
             </div>
           </div>
         ))}
