@@ -11,13 +11,20 @@ function Cart() {
 
   const handleCart = () => {
     const storage = JSON.parse(localStorage.getItem("cart"));
-    if (!storage) {
+    if (!storage || storage.length === 0) {
       setEmpty(true);
     } else {
       setCart(storage);
     }
     return;
   };
+
+  const handleRemoveItem = (productId) => {
+    const storage = JSON.parse(localStorage.getItem("cart"));
+    const removeList = storage?.filter((id) => id !== productId)
+    localStorage.setItem('cart', JSON.stringify(removeList));
+    setCart(removeList)
+  }
 
   useEffect(() => {
     handleCart();
@@ -31,6 +38,7 @@ function Cart() {
         : newList.map((guitar) => (
             <div key={guitar.id}>
               <img src={guitar.image} alt="" className="w-[100px]" />
+              <button onClick={() => handleRemoveItem(guitar.id)} >Remove</button>
             </div>
           ))}
     </div>
