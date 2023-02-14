@@ -13,6 +13,7 @@ function Cart() {
 
   const handleCart = () => {
     const storage = JSON.parse(localStorage.getItem("cart"));
+
     if (!storage || storage.length === 0) {
       setEmpty(true);
     } else {
@@ -24,14 +25,16 @@ function Cart() {
   const handleRemoveItem = (productId) => {
     const storage = JSON.parse(localStorage.getItem("cart"));
     const removeList = storage?.filter((id) => id !== productId);
+
     localStorage.setItem("cart", JSON.stringify(removeList));
     setCart(removeList);
+
     return cart.length === 1 ? setEmpty(true) : setEmpty(false);
   };
 
   const redirectCheckout = () => {
-    user.email.length > 0 ? navigate("/checkout") : navigate("/login")
-  }
+    user.email.length > 0 ? navigate("/checkout") : navigate("/login");
+  };
 
   useEffect(() => {
     handleCart();
@@ -51,7 +54,7 @@ function Cart() {
         ))
       )}
       <div>
-        <button onClick={ redirectCheckout }>Checkout</button>
+        <button onClick={redirectCheckout}>Checkout</button>
       </div>
     </div>
   );
