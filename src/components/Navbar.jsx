@@ -25,7 +25,6 @@ function Navbar() {
         // Checks whether user is at the login page or not.
         // if so, user cannot see links to login or profile pages //
         ""
-        
       ) : user && user.email.length > 0 ? (
         // Checks if user is loggedin and display links //
         <Link to="/profile" className="m-3">

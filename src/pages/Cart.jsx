@@ -33,7 +33,7 @@ function Cart() {
   };
 
   const redirectCheckout = () => {
-    user.email.length > 0 ? navigate("/checkout") : navigate("/login");
+    user && user.email.length > 0 ? navigate("/checkout") : navigate("/login");
   };
 
   useEffect(() => {
