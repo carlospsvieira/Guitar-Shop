@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import CustomBtn from "../components/CustomBtn";
+import FavoriteBtn from "../components/FavoriteBtn";
 import { guitars } from "../data";
 
 function Details() {
@@ -9,9 +10,12 @@ function Details() {
   const guitar = guitars.find((guitar) => guitar.id === guitarId);
   return (
     <div>
-      <img src={guitar.image} alt="" className="w-[200px]"/>
+      <img src={guitar.image} alt="" className="w-[200px]" />
       <CustomBtn productId={guitar.id} />
-      <Link to="/cart">Go to Cart</Link>
+      <FavoriteBtn productId={guitar.id} />
+      <div>
+        <Link to="/cart">Go to Cart</Link>
+      </div>
     </div>
   );
 }

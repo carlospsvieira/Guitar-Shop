@@ -3,25 +3,16 @@ import { Context } from "../context/AddProvider";
 
 function CustomBtn({ productId }) {
   const { setCart } = useContext(Context);
-  const [btnText, setBtnText] = useState("Add");
-
-  // changes btn text on click back and forth //
-  const btnTextChange = () => {
-    if (btnText === "Add") {
-      setBtnText("Added");
-    } else {
-      setBtnText("Add");
-    }
-  };
+  const [btnText, setBtnText] = useState(false);
 
   // handles btn previous btn text when page is reloaded //
   const handleBtnText = () => {
     const storage = JSON.parse(localStorage.getItem("cart"));
     const existingId = storage?.find((id) => id === productId);
     if (existingId) {
-      setBtnText("Added");
+      setBtnText(true);
     } else {
-      setBtnText("Add");
+      setBtnText(false);
     }
   };
 
@@ -48,7 +39,7 @@ function CustomBtn({ productId }) {
 
   const handleClick = () => {
     handleStorage();
-    btnTextChange();
+    handleBtnText()
     handleCart();
   };
 
@@ -58,7 +49,7 @@ function CustomBtn({ productId }) {
 
   return (
     <div>
-      <button onClick={handleClick}>{btnText}</button>
+      <button onClick={handleClick}>{!btnText ? "Add" : "Added"}</button>
     </div>
   );
 }

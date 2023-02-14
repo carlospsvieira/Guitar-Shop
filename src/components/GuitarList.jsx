@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { guitars } from "../data";
 import CustomBtn from "./CustomBtn";
+import FavoriteBtn from "./FavoriteBtn";
 
 function GuitarList() {
   const location = useLocation();
@@ -27,6 +28,7 @@ function GuitarList() {
                 View Guitar
               </Link>
               <CustomBtn productId={guitar.id} />
+              <FavoriteBtn productId={guitar.id} />
             </div>
           </div>
         ))}
