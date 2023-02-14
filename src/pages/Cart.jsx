@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Context } from "../context/AddProvider";
 import { guitars } from "../data";
 
 function Cart() {
-  const { cart, setCart } = useContext(Context);
+  const { cart, setCart, user } = useContext(Context);
   const [empty, setEmpty] = useState(false);
+  const navigate = useNavigate();
   const newList = guitars.filter((guitar) =>
     cart?.map((id) => id).includes(guitar.id)
   );
@@ -27,6 +29,10 @@ function Cart() {
     return cart.length === 1 ? setEmpty(true) : setEmpty(false);
   };
 
+  const redirectCheckout = () => {
+    user.email.length > 0 ? navigate("/checkout") : navigate("/login")
+  }
+
   useEffect(() => {
     handleCart();
   }, []);
@@ -44,6 +50,9 @@ function Cart() {
           </div>
         ))
       )}
+      <div>
+        <button onClick={ redirectCheckout }>Checkout</button>
+      </div>
     </div>
   );
 }
