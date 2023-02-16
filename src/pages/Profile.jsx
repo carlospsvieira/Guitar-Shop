@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../context/AddProvider";
 import { guitars } from "../data"
+import { MdFavorite } from "react-icons/md";
+import CustomBtn from "../components/CustomBtn";
+
 
 function Profile() {
   const { user, favorite, setFavorite } = useContext(Context);
@@ -48,12 +51,14 @@ function Profile() {
       <p>{user.email}</p>
       <h2>Your favorite guitars: </h2>
       {empty ? (
-        <p>You don't have a favorite guitar.</p>
+        <p>You don't have a favorite guitar yet.</p>
       ) : (
         newList.map((guitar) => (
           <div key={guitar.id}>
             <img src={guitar.image} alt="" className="w-[100px]" />
-            <button onClick={() => handleRemoveItem(guitar.id)}>Remove</button>
+            <p>{`$${guitar.price}`}</p>
+            <button onClick={() => handleRemoveItem(guitar.id)}> <MdFavorite className="text-red-600"/> </button>
+            <CustomBtn />
           </div>
         ))
       )}

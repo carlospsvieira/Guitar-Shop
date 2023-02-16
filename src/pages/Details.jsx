@@ -11,6 +11,9 @@ function Details() {
   return (
     <div>
       <img src={guitar.image} alt="" className="w-[200px]" />
+      <p>{guitar.name}</p>
+      <p className="w-[350px] text-justify">{guitar.longDescription}</p>
+      <p className="text-zinc-600">{`$${guitar.price}`}</p>
       <CustomBtn productId={guitar.id} />
       <FavoriteBtn productId={guitar.id} />
       <div>

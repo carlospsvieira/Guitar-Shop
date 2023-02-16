@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../context/AddProvider";
 import { guitars } from "../data";
+import { BsCartX } from "react-icons/bs"
 
 function Cart() {
   const { cart, setCart, user } = useContext(Context);
@@ -10,6 +11,7 @@ function Cart() {
   const newList = guitars.filter((guitar) =>
     cart?.map((id) => id).includes(guitar.id)
   );
+  const pricing = newList.map((guitar) => guitar.price);
 
   const handleCart = () => {
     const storage = JSON.parse(localStorage.getItem("cart"));
@@ -49,10 +51,16 @@ function Cart() {
         newList.map((guitar) => (
           <div key={guitar.id}>
             <img src={guitar.image} alt="" className="w-[100px]" />
-            <button onClick={() => handleRemoveItem(guitar.id)}>Remove</button>
+            <p>{`$${guitar.price}`}</p>
+            <button onClick={() => handleRemoveItem(guitar.id)}><BsCartX size={20} className="text-red-700"/></button>
           </div>
         ))
       )}
+      <div>
+        <p>Total: ${pricing.reduce((acc, price) => {
+          return acc + price;
+        }, 0)}</p>
+      </div>
       <div>
         <button onClick={redirectCheckout}>Checkout</button>
       </div>

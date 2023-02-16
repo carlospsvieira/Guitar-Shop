@@ -49,7 +49,7 @@ function FavoriteBtn({productId}) {
   }, []);
 
   return (
-    <button onClick={handleClick}>
+    <button onClick={handleClick} className="text-xl">
       {!heart ? <MdFavoriteBorder /> : <MdFavorite className="text-red-600" />}
     </button>
   );

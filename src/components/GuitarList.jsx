@@ -14,13 +14,16 @@ function GuitarList() {
 
   return (
     <div className="m-2">
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center gap-[2rem]">
         {guitarList.map((guitar) => (
-          <div key={guitar.id} className="flex flex-col justify-center">
+          <div key={guitar.id} className="flex flex-col w-[250px]">
             <div>
               <img src={guitar.image} alt="" className="w-[200px]" />
+              <p>{guitar.name}</p>
+              <p>{guitar.shortDescription}</p>
+              <p className="text-zinc-600">{`$${guitar.price}`}</p>
             </div>
-            <div className="flex">
+            <div className="flex gap-4">
               <Link
                 to={`${location.pathname}/${guitar.id}`}
                 className="bg-zinc-800 w-[100px] text-center text-white text-sm rounded-md py-1 px-2"

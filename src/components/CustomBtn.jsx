@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../context/AddProvider";
+import { BsCartPlus, BsFillCartCheckFill } from "react-icons/bs";
 
 function CustomBtn({ productId }) {
   const { setCart } = useContext(Context);
@@ -39,7 +40,7 @@ function CustomBtn({ productId }) {
 
   const handleClick = () => {
     handleStorage();
-    handleBtnText()
+    handleBtnText();
     handleCart();
   };
 
@@ -48,9 +49,9 @@ function CustomBtn({ productId }) {
   }, []);
 
   return (
-    <div>
-      <button onClick={handleClick}>{!btnText ? "Add" : "Added"}</button>
-    </div>
+      <button onClick={handleClick} className="text-2xl">
+        {!btnText ? <BsCartPlus /> : <BsFillCartCheckFill className="text-cyan-600"/>}
+      </button>
   );
 }
 
