@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Context } from "../context/AddProvider";
+import { CgProfile } from "react-icons/cg";
 
 function Navbar() {
   const { user, setUser } = useContext(Context);
@@ -16,7 +17,7 @@ function Navbar() {
   }, []);
 
   return (
-    <div>
+    <div className="flex items-center">
       <Link to="/" className="text-2xl mr-5">
         Guitar Shop
       </Link>
@@ -28,7 +29,7 @@ function Navbar() {
       ) : user && user.email.length > 0 ? (
         // Checks if user is loggedin and display links //
         <Link to="/profile" className="m-3">
-          Profile
+          <CgProfile size={25} />
         </Link>
       ) : (
         <Link to="/login" className="m-3">

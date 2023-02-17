@@ -14,19 +14,21 @@ function Login() {
   };
 
   return (
-    <>
+    <div className="flex flex-col items-center justify-center gap-2 h-[50vh]">
       <input
         type="email"
         name="email"
-        className="border-2 border-black mr-4"
+        className="border-2 border-black"
         onChange={(e) => setUser({ email: e.target.value })}
       />
+      <span className="text-sm">email: adm@guitar-shop.com</span>
       <input
         type="password"
         name="password"
         onChange={(e) => setPassword(e.target.value)}
         className="border-2 border-black"
       />
+      <span className="text-sm">password: 1234567</span>
       <button
         onClick={handleClick}
         disabled={validPassword}
@@ -35,9 +37,11 @@ function Login() {
         Login
       </button>
       <div>
-       <span className="text-sm">Not a member yet? <Link to="/register">Sign Up</Link></span>
+        <span className="text-sm">
+          Not a member yet? <Link to="/register">Sign Up</Link>
+        </span>
       </div>
-    </>
+    </div>
   );
 }
 
