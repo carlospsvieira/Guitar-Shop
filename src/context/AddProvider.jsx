@@ -5,6 +5,7 @@ export const Context = createContext();
 function AddProvider({ children }) {
   const [cart, setCart] = useState([]);
   const [favorite, setFavorite] = useState([]);
+  const [filtered, setFiltered] = useState(false);
   const [user, setUser] = useState({
     email: "",
   });
@@ -17,8 +18,10 @@ function AddProvider({ children }) {
       setUser,
       favorite,
       setFavorite,
+      filtered,
+      setFiltered,
     }),
-    [cart, setCart, user, setUser, favorite, setFavorite]
+    [cart, setCart, user, setUser, favorite, setFavorite, filtered, setFiltered]
   );
 
   return <Context.Provider value={value}>{children}</Context.Provider>;
