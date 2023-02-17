@@ -14,11 +14,22 @@ function GuitarList() {
 
   return (
     <div className="m-2">
-      <div className="flex flex-wrap justify-center gap-[2rem]">
+      <select name="brand" id="brand">
+        <option value={null}>What are you looking for?</option>
+        {guitarList.map((guitar, index) => (
+          <option key={index} value={guitar.brand}>
+            {guitar.brand}
+          </option>
+        ))}
+      </select>
+      <div className="flex flex-wrap justify-center gap-[2rem] items-end">
         {guitarList.map((guitar) => (
-          <div key={guitar.id} className="flex flex-col w-[250px]">
+          <div
+            key={guitar.id}
+            className="flex flex-col w-[250px] gap-2 items-center"
+          >
             <div>
-              <img src={guitar.image} alt="" className="w-[200px]" />
+              <img src={guitar.image} alt="" className="w-[200px] mb-2" />
               <p>{guitar.name}</p>
               <p>{guitar.shortDescription}</p>
               <p className="text-zinc-600">{`$${guitar.price}`}</p>

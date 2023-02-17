@@ -1,13 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../context/AddProvider";
-import { guitars } from "../data"
+import { guitars } from "../data";
 import { MdFavorite } from "react-icons/md";
 import CustomBtn from "../components/CustomBtn";
 
-
 function Profile() {
-  const { user, favorite, setFavorite } = useContext(Context);
+  const { user, favorite, setFavorite, setCart } = useContext(Context);
   const [empty, setEmpty] = useState(false);
   const navigate = useNavigate();
   const newList = guitars.filter((guitar) =>
@@ -36,10 +35,10 @@ function Profile() {
   };
 
   const handleLogout = () => {
-    localStorage.clear()
-    navigate("/")
+    localStorage.clear();
+    navigate("/");
     location.reload(true);
-  }
+  };
 
   useEffect(() => {
     handleFavorite();
@@ -57,12 +56,15 @@ function Profile() {
           <div key={guitar.id}>
             <img src={guitar.image} alt="" className="w-[100px]" />
             <p>{`$${guitar.price}`}</p>
-            <button onClick={() => handleRemoveItem(guitar.id)}> <MdFavorite className="text-red-600"/> </button>
-            <CustomBtn />
+            <button onClick={() => handleRemoveItem(guitar.id)}>
+              {" "}
+              <MdFavorite className="text-red-600" />{" "}
+            </button>
+            <CustomBtn productId={guitar.id} />
           </div>
         ))
       )}
-      <button onClick={ handleLogout }>Logout</button>
+      <button onClick={handleLogout}>Logout</button>
     </>
   );
 }
