@@ -17,7 +17,7 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center bg-black text-white">
       <Link to="/" className="text-2xl mr-5">
         Guitar Shop
       </Link>
