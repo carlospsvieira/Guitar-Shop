@@ -40,7 +40,7 @@ function GuitarList() {
           </option>
         ))}
       </select>
-      <div className="flex flex-wrap justify-center gap-[2rem] items-end">
+      <div>
         {/* component listing all or filtered guitars */}
         <Filtered brand={brand} />
       </div>

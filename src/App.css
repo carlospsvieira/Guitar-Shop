@@ -44,3 +44,9 @@
   opacity: 1;
   right: 0;
 }
+
+.login-btn:hover {
+  cursor: pointer;
+  border-bottom: 2px solid white;
+  margin-bottom: -1px;
+}

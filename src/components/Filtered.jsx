@@ -18,7 +18,7 @@ function Filtered({ brand }) {
   );
 
   return (
-    <div>
+    <div className="flex flex-wrap justify-center gap-[2rem] items-end">
       {!filtered
         ? guitarList.map((guitar) => (
             <div
