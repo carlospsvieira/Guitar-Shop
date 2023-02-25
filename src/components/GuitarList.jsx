@@ -44,26 +44,6 @@ function GuitarList() {
         {/* component listing all or filtered guitars */}
         <Filtered brand={brand} />
       </div>
-      {/* Links to both electric or acoustic page depending on current pathname */}
-      <div className="mt-3">
-        {location.pathname === "/acoustic" ? (
-          <Link
-            to="/electric"
-            onClick={switchGuitarType}
-            className="bg-red-400 rounded-md px-2 py-1"
-          >
-            See our electric guitars
-          </Link>
-        ) : (
-          <Link
-            to="/acoustic"
-            onClick={switchGuitarType}
-            className="bg-sky-500 rounded-md px-2 py-1"
-          >
-            See our acoustic guitars
-          </Link>
-        )}
-      </div>
     </div>
   );
 }

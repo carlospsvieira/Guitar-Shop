@@ -16,19 +16,21 @@ function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="acoustic" element={<Guitars />} />
-        <Route path="electric" element={<Guitars />} />
-        <Route path="acoustic/:id" element={<Details />} />
-        <Route path="electric/:id" element={<Details />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="acoustic" element={<Guitars />} />
+          <Route path="electric" element={<Guitars />} />
+          <Route path="acoustic/:id" element={<Details />} />
+          <Route path="electric/:id" element={<Details />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
       <Footer />
     </>
   );
