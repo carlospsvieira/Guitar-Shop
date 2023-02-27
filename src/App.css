@@ -45,8 +45,14 @@
   right: 0;
 }
 
-.login-btn:hover {
+.login-btn:hover, .guitar-link:hover {
   cursor: pointer;
   border-bottom: 2px solid white;
   margin-bottom: -1px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .guitar-link {
+    display: none;
+  }
 }
