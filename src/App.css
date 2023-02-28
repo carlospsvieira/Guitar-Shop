@@ -15,36 +15,6 @@
   object-fit: cover;
 }
 
-.hero a {
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-.hero a span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.3s;
-}
-
-.hero a span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.3s;
-}
-
-.hero a:hover span {
-  padding-right: 25px;
-}
-
-.hero a:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
 .login-btn:hover, .guitar-link:hover {
   cursor: pointer;
   border-bottom: 2px solid white;
@@ -91,7 +61,6 @@
   font-weight: 600;
   font-size: xx-large;
 }
-
 
 @media only screen and (max-width: 1000px) {
   .guitar-link {
