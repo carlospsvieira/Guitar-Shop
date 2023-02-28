@@ -43,7 +43,7 @@ function Cart() {
   }, []);
 
   return (
-    <div>
+    <div className="h-screen pt-[5%]">
       <h1>Cart</h1>
       {empty ? (
         <p>Your cart is empty.</p>

@@ -9,7 +9,7 @@ function Details() {
   const guitarId = location.pathname.split("/")[2];
   const guitar = guitars.find((guitar) => guitar.id === guitarId);
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-4 h-screen pt-[5%]">
       <img src={guitar.image} alt="" className="w-[300px]" />
       <span>{guitar.name}</span>
       <span className="w-[350px] text-justify">{guitar.longDescription}</span>

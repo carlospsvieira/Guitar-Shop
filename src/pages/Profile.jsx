@@ -45,7 +45,7 @@ function Profile() {
   }, []);
 
   return (
-    <>
+    <div className="h-screen pt-[5%]">
       <h1>Profile</h1>
       <p>{user.email}</p>
       <h2>Your favorite guitars: </h2>
@@ -65,7 +65,7 @@ function Profile() {
         ))
       )}
       <button onClick={handleLogout}>Logout</button>
-    </>
+    </div>
   );
 }
 

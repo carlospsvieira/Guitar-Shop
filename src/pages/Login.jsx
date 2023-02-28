@@ -14,7 +14,7 @@ function Login() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-2 h-[50vh]">
+    <div className="flex flex-col items-center justify-center gap-2 h-[50vh] pt-[5%]">
       <input
         type="email"
         name="email"
