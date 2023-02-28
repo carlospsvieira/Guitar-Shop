@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Context } from "../context/AddProvider";
 import { CgProfile, CgMenu, CgClose } from "react-icons/cg";
 import { RiShoppingCartLine } from "react-icons/ri";
-import { FaGuitar } from "react-icons/fa";
+import { SiMusicbrainz } from "react-icons/si";
 
 function Navbar() {
   const { user, setUser, nav, setNav } = useContext(Context);
@@ -25,29 +25,43 @@ function Navbar() {
 
   return (
     <nav>
-      <div className="flex justify-around items-center bg-black text-white py-4 w-full">
+      <div className="flex justify-around items-center fixed z-[1] bg-black text-white py-4 w-full">
         {nav ? (
           <div className="flex flex-col w-full h-screen items-center">
             <div className="flex items-center mt-4">
-            <Link to="/" onClick={handleNav} className="text-2xl flex mr-[5rem]">
-              <FaGuitar size={25} /> <span className="ml-2">Guitar Shop</span>
-            </Link>
-            <CgClose onClick={handleNav} className="lg:hidden" size={25} />
+              <Link
+                to="/"
+                onClick={handleNav}
+                className="text-2xl flex mr-[5rem]"
+              >
+                <SiMusicbrainz size={25} />{" "}
+                <span className="ml-2">Guitar Shop</span>
+              </Link>
+              <CgClose onClick={handleNav} className="lg:hidden" size={25} />
             </div>
 
             <div className="flex flex-col gap-4 text-lg mt-[25%] items-center">
-              <Link to="/acoustic" onClick={handleNav} className="login-btn text-lg">
+              <Link
+                to="/acoustic"
+                onClick={handleNav}
+                className="login-btn text-lg"
+              >
                 Acoustic
               </Link>
-              <Link to="/electric" onClick={handleNav} className="login-btn text-lg">
+              <Link
+                to="/electric"
+                onClick={handleNav}
+                className="login-btn text-lg"
+              >
                 Electric
               </Link>
             </div>
           </div>
         ) : (
-          <div className="flex justify-around items-center bg-black text-white py-4 w-full">
-            <Link to="/" className="text-2xl mr-5 flex">
-              <FaGuitar size={25} /> <span className="ml-2">Guitar Shop</span>
+          <div className="flex justify-around items-center bg-black text-white w-full">
+            <Link to="/" className="text-3xl mr-5 flex">
+              <SiMusicbrainz size={25} />{" "}
+              <span className="ml-2">Guitar Shop</span>
             </Link>
 
             <div className="flex items-center gap-8">

@@ -10,7 +10,7 @@ function Hero() {
         href="#category"
         className="bg-amber-500
           py-4
-          rounded-sm
+          rounded-md
           text-white
           font-bold
           text-center

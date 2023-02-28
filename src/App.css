@@ -16,7 +16,7 @@
 }
 
 .hero a {
-  transition: all 0.5s;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
@@ -24,7 +24,7 @@
   cursor: pointer;
   display: inline-block;
   position: relative;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .hero a span:after {
@@ -33,7 +33,7 @@
   opacity: 0;
   top: 0;
   right: -20px;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .hero a:hover span {
@@ -51,8 +51,83 @@
   margin-bottom: -1px;
 }
 
+.acoustic-btn {
+  background-image: url('./images/acoustic-btn.jpg');
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 400px;
+  height: 300px;
+  transition: 0.3s;
+}
+
+.electric-btn {
+  background-image: url('./images/electric-btn.jpg');
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 400px;
+  height: 300px;
+  transition: 0.3s;
+}
+
+.electric-btn span, .acoustic-btn span {
+  display: none;
+}
+
+.acoustic-btn:hover, .electric-btn:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+  transition: 0.3s;
+}
+
+.electric-btn:hover span, .acoustic-btn:hover span {
+  display: contents;
+  color: white;
+  text-shadow: 3px 3px black;
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+
 @media only screen and (max-width: 1000px) {
   .guitar-link {
     display: none;
+  }
+
+  #category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35%;
+    gap: 1rem;
+    background-color: white;
+  }
+
+  #category h1 {
+    font-size: large;
+    margin-bottom: 1rem;
+  }
+
+  .category-btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .acoustic-btn, .electric-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+  }
+
+  .electric-btn span, .acoustic-btn span {
+    display: contents;
+    color: white;
+    font-weight: 600;
+    font-size: xx-large;
   }
 }
