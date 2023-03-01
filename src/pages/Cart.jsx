@@ -43,7 +43,7 @@ function Cart() {
   }, []);
 
   return (
-    <div className="h-screen pt-[5%]">
+    <div className="h-screen">
       <h1>Cart</h1>
       {empty ? (
         <p>Your cart is empty.</p>
@@ -58,8 +58,9 @@ function Cart() {
       )}
       <div>
         <p>Total: ${pricing.reduce((acc, price) => {
-          return acc + price;
-        }, 0)}</p>
+          const total = acc + price;
+          return total
+        }, 0).toFixed(2)}</p>
       </div>
       <div>
         <button onClick={redirectCheckout}>Checkout</button>

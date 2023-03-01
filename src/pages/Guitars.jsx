@@ -5,7 +5,7 @@ import GuitarList from "../components/GuitarList";
 function Guitars() {
   const location = useLocation();
   return (
-    <div className="h-screen pt-[5%]">
+    <div>
       {location.pathname === "/acoustic" ? (
         <div>
           <h1 className="text-2xl">Acoustic Guitars</h1>

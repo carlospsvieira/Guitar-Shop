@@ -70,8 +70,8 @@
   #category {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-top: 35%;
     gap: 1rem;
     background-color: white;
   }
@@ -79,6 +79,7 @@
   #category h1 {
     font-size: large;
     margin-bottom: 1rem;
+    text-align: center;
   }
 
   .category-btns {
@@ -89,6 +90,8 @@
   .acoustic-btn, .electric-btn {
     display: flex;
     justify-content: center;
+    width: 325px;
+    height: 225px;
     align-items: center;
     opacity: 0.8;
   }

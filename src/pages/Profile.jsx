@@ -45,7 +45,7 @@ function Profile() {
   }, []);
 
   return (
-    <div className="h-screen pt-[5%]">
+    <div className="h-screen">
       <h1>Profile</h1>
       <p>{user.email}</p>
       <h2>Your favorite guitars: </h2>

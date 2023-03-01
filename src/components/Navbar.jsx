@@ -25,7 +25,7 @@ function Navbar() {
 
   return (
     <nav>
-      <div className="flex justify-around items-center fixed z-[1] bg-black text-white py-4 w-full">
+      <div className="flex justify-around items-center z-[1] bg-black text-white py-4 w-full">
         {nav ? (
           <div className="flex flex-col w-full h-screen items-center">
             <div className="flex items-center mt-4">
