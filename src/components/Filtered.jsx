@@ -8,6 +8,7 @@ import FavoriteBtn from "./FavoriteBtn";
 function Filtered({ brand }) {
   const { filtered } = useContext(Context);
   const location = useLocation();
+
   const filteredList = guitars.filter(
     (guitar) =>
       guitar.brand === brand && guitar.type === location.pathname.substring(1)
@@ -18,15 +19,15 @@ function Filtered({ brand }) {
   );
 
   return (
-    <div className="flex flex-wrap justify-center gap-[2rem] items-end">
+    <div className="flex flex-wrap justify-center gap-4 items-end">
       {!filtered
         ? guitarList.map((guitar) => (
             <div
               key={guitar.id}
-              className="flex flex-col w-[250px] gap-2 items-center"
+              className="flex flex-col justify-end w-[250px] h-[350px] gap-2 items-center shadow-md px-2 py-4"
             >
               <div>
-                <img src={guitar.image} alt="" className="w-[200px] mb-2" />
+                <img src={guitar.image} alt="" className="w-[200px] mb-2"/>
                 <p>{guitar.name}</p>
                 <p>{guitar.shortDescription}</p>
                 <p className="text-zinc-600">{`$${guitar.price}`}</p>

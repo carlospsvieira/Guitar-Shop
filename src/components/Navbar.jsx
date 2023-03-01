@@ -55,11 +55,18 @@ function Navbar() {
               >
                 Electric
               </Link>
+              <Link
+                to="/login"
+                onClick={handleNav}
+                className="login-btn text-lg"
+              >
+                Login
+              </Link>
             </div>
           </div>
         ) : (
           <div className="flex justify-around items-center bg-black text-white w-full">
-            <Link to="/" className="text-3xl mr-5 flex">
+            <Link to="/" className="text-3xl mr-5 flex logo">
               <SiMusicbrainz size={25} />{" "}
               <span className="ml-2">Guitar Shop</span>
             </Link>
@@ -82,7 +89,7 @@ function Navbar() {
                   <CgProfile size={25} />
                 </Link>
               ) : (
-                <Link to="/login" className="login-btn text-lg">
+                <Link to="/login" className="login-btn text-lg login">
                   Login
                 </Link>
               )}
