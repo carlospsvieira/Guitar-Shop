@@ -8,11 +8,11 @@ function Guitars() {
     <div>
       {location.pathname === "/acoustic" ? (
         <div>
-          <h1 className="text-2xl">Acoustic Guitars</h1>
+          <h1 className="text-4xl text-center mt-6">Acoustic Guitars</h1>
         </div>
       ) : (
         <div>
-          <h1 className="text-2xl">Electric Guitars</h1>
+          <h1 className="text-4xl text-center mt-6">Electric Guitars</h1>
         </div>
       )}
       <GuitarList />

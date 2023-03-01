@@ -30,16 +30,18 @@ function GuitarList() {
   };
 
   return (
-    <div className="m-2">
-      <label htmlFor="brand">Choose a brand: </label>
-      <select name="brand" id="brand" onChange={handleChange}>
-        <option value="All">All</option>
-        {guitarList.map((guitar, index) => (
-          <option key={index} value={guitar.brand}>
-            {guitar.brand}
-          </option>
-        ))}
-      </select>
+    <div className="p-10">
+      <div className="flex justify-center gap-4 mb-4 text-lg">
+        <label htmlFor="brand">Choose a brand: </label>
+        <select name="brand" id="brand" onChange={handleChange}>
+          <option value="All">All</option>
+          {guitarList.map((guitar, index) => (
+            <option key={index} value={guitar.brand}>
+              {guitar.brand}
+            </option>
+          ))}
+        </select>
+      </div>
       <div>
         {/* component listing all or filtered guitars */}
         <Filtered brand={brand} />

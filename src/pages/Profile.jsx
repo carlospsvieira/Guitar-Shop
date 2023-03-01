@@ -50,7 +50,7 @@ function Profile() {
       <p>{user.email}</p>
       <h2>Your favorite guitars: </h2>
       {empty ? (
-        <p>You don't have a favorite guitar yet.</p>
+        <p>You don't have any favorite guitars yet.</p>
       ) : (
         newList.map((guitar) => (
           <div key={guitar.id}>

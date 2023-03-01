@@ -12,7 +12,7 @@ function Details() {
     <div className="flex justify-center pt-[5rem] h-screen">
       <div className="flex flex-col items-center pt-[5rem] gap-4 pb-8 shadow-lg h-[700px] w-[500px]">
         <img src={guitar.image} alt="" className="w-[300px]" />
-        <span>{guitar.name}</span>
+        <span className="font-bold text-lg">{guitar.name}</span>
         <span className="w-[350px] text-center">{guitar.longDescription}</span>
         <span className="text-zinc-600">{`$${guitar.price}`}</span>
         <div className="flex gap-4">
@@ -20,7 +20,12 @@ function Details() {
           <FavoriteBtn productId={guitar.id} />
         </div>
         <div>
-          <Link to="/cart">Go to Cart</Link>
+          <Link
+            to="/cart"
+            className="bg-zinc-800 text-center text-white text-sm rounded-md py-2 px-4"
+          >
+            Go to Cart
+          </Link>
         </div>
       </div>
     </div>

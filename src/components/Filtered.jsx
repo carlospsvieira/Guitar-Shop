@@ -27,8 +27,8 @@ function Filtered({ brand }) {
               className="flex flex-col justify-end w-[250px] h-[350px] gap-2 items-center shadow-md px-2 py-4"
             >
               <div>
-                <img src={guitar.image} alt="" className="w-[200px] mb-2"/>
-                <p>{guitar.name}</p>
+                <img src={guitar.image} alt="" className="w-[200px] mb-2 ml-2"/>
+                <p className="font-bold">{guitar.name}</p>
                 <p>{guitar.shortDescription}</p>
                 <p className="text-zinc-600">{`$${guitar.price}`}</p>
               </div>
