@@ -31,7 +31,7 @@ function GuitarList() {
 
   return (
     <div className="p-10">
-      <div className="flex justify-center gap-4 mb-4 text-lg">
+      <div className="flex justify-center gap-4 mb-4 text-xl">
         <label htmlFor="brand">Choose a brand: </label>
         <select name="brand" id="brand" onChange={handleChange}>
           <option value="All">All</option>
