@@ -21,6 +21,7 @@ function Login() {
 
   return (
     <div className="flex flex-col items-center justify-center gap-1 h-[50vh]">
+      <h1 className="text-center text-3xl mb-6">Login</h1>
       <input
         type="email"
         name="email"
@@ -32,7 +33,7 @@ function Login() {
         type="password"
         name="password"
         onChange={(e) => setPassword(e.target.value)}
-        className="border-2 border-black text-center py-2"
+        className="border-2 border-black text-center py-2 mb-4"
         placeholder="Password"
       />
       <span className="text-sm">email: adm@guitar-shop.com</span>
