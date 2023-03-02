@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../context/AddProvider";
 import { guitars } from "../data";
-import { BsCartX } from "react-icons/bs"
+import { BsCartX } from "react-icons/bs";
 
 function Cart() {
   const { cart, setCart, user } = useContext(Context);
@@ -43,27 +43,43 @@ function Cart() {
   }, []);
 
   return (
-    <div className="h-screen">
-      <h1>Cart</h1>
+    <div className="h-screenpx-10">
+      <h1 className="text-3xl">Your Shopping Cart</h1>
       {empty ? (
-        <p>Your cart is empty.</p>
+        <p className="">Your cart is empty.</p>
       ) : (
         newList.map((guitar) => (
-          <div key={guitar.id}>
-            <img src={guitar.image} alt="" className="w-[100px]" />
-            <p>{`$${guitar.price}`}</p>
-            <button onClick={() => handleRemoveItem(guitar.id)}><BsCartX size={20} className="text-red-700"/></button>
+          <div
+            key={guitar.id}
+            className="flex justify-between items-end max-w-[400px] py-2 px-4 gap-14 shadow-md"
+          >
+            <img src={guitar.image} alt="" className="w-[80px]" />
+            <div className="flex flex-col gap-2 justify-center">
+              <span>{guitar.name}</span>
+              <button onClick={() => handleRemoveItem(guitar.id)}>
+                <BsCartX size={20} className="text-red-700" />
+              </button>
+            </div>
+            <span>{`$${guitar.price}`}</span>
           </div>
         ))
       )}
       <div>
-        <p>Total: ${pricing.reduce((acc, price) => {
-          const total = acc + price;
-          return total
-        }, 0).toFixed(2)}</p>
-      </div>
-      <div>
-        <button onClick={redirectCheckout}>Checkout</button>
+        <p>
+          Total: $
+          {pricing
+            .reduce((acc, price) => {
+              const total = acc + price;
+              return total;
+            }, 0)
+            .toFixed(2)}
+        </p>
+        <button
+          onClick={redirectCheckout}
+          className="bg-black text-white px-4 py-2 "
+        >
+          Checkout
+        </button>
       </div>
     </div>
   );
