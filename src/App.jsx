@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import 'react-toastify/dist/ReactToastify.css'
+import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import AutoTop from "./components/AutoTop";
 import ScrollToTop from "react-scroll-to-top";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -20,6 +21,7 @@ function App() {
     <>
       <Navbar />
       <main>
+        <AutoTop />
         <ScrollToTop className="px-[5px]" />
         <ToastContainer limit={1} />
         <Routes>
