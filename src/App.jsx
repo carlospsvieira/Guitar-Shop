@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import ScrollToTop from "react-scroll-to-top";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Details from "./pages/Details";
@@ -17,6 +18,7 @@ function App() {
     <>
       <Navbar />
       <main>
+        <ScrollToTop className="px-[5px]" />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="acoustic" element={<Guitars />} />

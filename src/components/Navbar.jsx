@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Context } from "../context/AddProvider";
 import { CgProfile, CgMenu, CgClose } from "react-icons/cg";
 import { RiShoppingCartLine } from "react-icons/ri";
-import { SiMusicbrainz } from "react-icons/si";
+import { GiMusicSpell } from "react-icons/gi";
 
 function Navbar() {
   const { user, setUser, nav, setNav } = useContext(Context);
@@ -25,16 +25,16 @@ function Navbar() {
 
   return (
     <nav>
-      <div className="flex justify-around items-center z-[1] bg-black text-white py-4 w-full">
+      <div className="flex justify-around items-center bg-black text-white py-4 w-full">
         {nav ? (
           <div className="flex flex-col w-full h-screen items-center">
             <div className="flex items-center mt-4">
               <Link
                 to="/"
                 onClick={handleNav}
-                className="text-2xl flex mr-[5rem]"
+                className="text-2xl flex items-center mr-[5rem]"
               >
-                <SiMusicbrainz size={25} />{" "}
+                <GiMusicSpell size={25} />{" "}
                 <span className="ml-2">Guitar Shop</span>
               </Link>
               <CgClose onClick={handleNav} className="lg:hidden" size={25} />
@@ -66,8 +66,8 @@ function Navbar() {
           </div>
         ) : (
           <div className="flex justify-around items-center bg-black text-white w-full">
-            <Link to="/" className="text-3xl mr-5 flex logo">
-              <SiMusicbrainz size={25} />{" "}
+            <Link to="/" className="text-3xl mr-5 flex items-center logo">
+              <GiMusicSpell size={25} />{" "}
               <span className="ml-2">Guitar Shop</span>
             </Link>
 

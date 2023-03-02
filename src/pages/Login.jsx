@@ -10,7 +10,7 @@ function Login() {
 
   const handleClick = () => {
     localStorage.setItem("user", JSON.stringify(user));
-    navigate("/");
+    navigate("/profile");
   };
 
   return (
