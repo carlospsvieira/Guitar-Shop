@@ -10,7 +10,7 @@ function Details() {
   const guitar = guitars.find((guitar) => guitar.id === guitarId);
   return (
     <div className="flex justify-center pt-[5rem] h-screen">
-      <div className="flex flex-col items-center gap-4 pb-8 shadow-lg w-[500px] h-[600px]">
+      <div className="flex flex-col items-center justify-end gap-4 pb-8 shadow-lg w-[500px] h-[600px]">
         <img src={guitar.image} alt="" className="w-[300px]" />
         <span className="font-bold text-lg">{guitar.name}</span>
         <span className="w-[350px] text-center">{guitar.longDescription}</span>

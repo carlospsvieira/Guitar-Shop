@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import GuitarList from "../components/GuitarList";
+import Filter from "../components/Filter";
 
 function Guitars() {
   const location = useLocation();
@@ -15,7 +15,7 @@ function Guitars() {
           <h1 className="text-4xl text-center mt-6">Electric Guitars</h1>
         </div>
       )}
-      <GuitarList />
+      <Filter />
     </div>
   );
 }

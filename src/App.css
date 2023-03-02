@@ -111,4 +111,9 @@
     font-weight: 600;
     font-size: xx-large;
   }
+
+  .register h1 {
+    font-size: medium;
+    text-align: center;
+  }
 }
