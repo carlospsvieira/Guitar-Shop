@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Context } from "../context/AddProvider";
 import { CgProfile, CgMenu, CgClose } from "react-icons/cg";
@@ -6,7 +6,7 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import { GiMusicSpell } from "react-icons/gi";
 
 function Navbar() {
-  const { user, setUser, nav, setNav } = useContext(Context);
+  const { user, setUser, nav, setNav, cart } = useContext(Context);
   const location = useLocation();
 
   const getUserInStorage = () => {
@@ -25,7 +25,7 @@ function Navbar() {
 
   return (
     <nav>
-      <div className="flex justify-around items-center bg-black text-white py-4 w-full">
+      <div className="flex justify-around items-center bg-zinc-800 text-white py-4 w-full">
         {nav ? (
           <div className="flex flex-col w-full h-screen items-center">
             <div className="flex items-center mt-4">
@@ -65,7 +65,7 @@ function Navbar() {
             </div>
           </div>
         ) : (
-          <div className="flex justify-around items-center bg-black text-white w-full">
+          <div className="flex justify-around items-center bg-zinc-800 text-white w-full">
             <Link to="/" className="text-3xl mr-5 flex items-center logo">
               <GiMusicSpell size={25} />{" "}
               <span className="ml-2">Guitar Shop</span>
@@ -95,7 +95,14 @@ function Navbar() {
               )}
 
               <Link to="/cart">
-                <RiShoppingCartLine size={25} />
+                <div className="flex">
+                  {cart.length < 1 ? (
+                    ""
+                  ) : (
+                    <span className="absolute pl-7">{cart.length}</span>
+                  )}
+                  <RiShoppingCartLine size={25} />
+                </div>
               </Link>
               <CgMenu onClick={handleNav} className="lg:hidden" size={25} />
             </div>

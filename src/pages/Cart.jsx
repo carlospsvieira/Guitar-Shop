@@ -48,15 +48,15 @@ function Cart() {
         Your Shopping Cart
       </h1>
       <div className="flex flex-wrap justify-center items-end gap-8 px-4">
-        <div className="flex flex-col h-[400px] justify-center rounded-md cart-list">
+        <div className="flex flex-col h-[400px] rounded-sm cart-list">
           {empty ? (
-            <div className="flex flex-col w-[400px] h-[500px] justify-end">
-              <p className="text-2xl text-center mb-[7rem]">
+            <div className="flex flex-col h-[400px] w-[350px] lg:w-[400px] lg:justify-end">
+              <h2 className="text-2xl text-center mb-[7rem]">
                 Your cart is empty.
-              </p>
+              </h2>
               <Link
                 to="/"
-                className="bg-amber-600 text-white text-center py-2 rounded-sm"
+                className="bg-amber-600 text-white text-center text-lg py-2 rounded-sm"
               >
                 Start Shopping
               </Link>
@@ -96,7 +96,7 @@ function Cart() {
           </p>
           <button
             onClick={redirectCheckout}
-            className="bg-black text-white py-2 rounded-sm"
+            className="bg-zinc-800 text-white text-lg py-2 rounded-sm"
           >
             Checkout
           </button>

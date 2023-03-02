@@ -40,7 +40,7 @@ function Login() {
       <button
         onClick={handleClick}
         disabled={validPassword}
-        className="px-4 py-2 text-white text-sm bg-black mt-5 mb-2 rounded-md disabled:bg-slate-600"
+        className="px-4 py-2 text-white text-sm bg-zinc-800 mt-5 mb-2 rounded-md disabled:bg-slate-400"
       >
         Login
       </button>

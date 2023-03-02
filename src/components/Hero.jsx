@@ -10,14 +10,14 @@ function Hero() {
       <AnimationOnScroll animateIn="animate__fadeInLeft">
         <a
           href="#category"
-          className="bg-amber-500
+          className="bg-amber-600
           py-3
           px-10
           rounded-md
           text-white
-          font-bold
           text-center
           text-2xl
+          font-[500]
           ml-[10%]
           "
         >
