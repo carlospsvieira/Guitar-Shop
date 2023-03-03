@@ -71,7 +71,7 @@
   font-size: xx-large;
 }
 
-.cart-list {
+.cart-list, .favorite-list {
   overflow-y: auto;
 }
 

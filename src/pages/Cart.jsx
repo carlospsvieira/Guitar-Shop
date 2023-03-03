@@ -44,7 +44,7 @@ function Cart() {
 
   return (
     <div className="flex flex-col gap-8">
-      <h1 className="text-2xl lg:text-4xl text-center mt-[5rem]">
+      <h1 className="text-2xl lg:text-4xl text-center mt-6">
         Your Shopping Cart
       </h1>
       <div className="flex flex-wrap justify-center items-end gap-8 px-4">
@@ -67,11 +67,13 @@ function Cart() {
                 key={guitar.id}
                 className="flex max-w-[500px] h-[100px] items-end justify-between p-4 gap-12 shadow-md"
               >
-                <div>
-                  <img src={guitar.image} alt="" className="w-[70px]" />
-                </div>
+                <Link to={`/${guitar.type}/${guitar.id}`}>
+                  <div>
+                    <img src={guitar.image} alt="" className="w-[70px]" />
+                  </div>
+                </Link>
                 <div className="flex flex-col gap-1 w-[150px] items-start">
-                  <span>{guitar.name}</span>
+                  <span className="font-bold">{guitar.name}</span>
                   <button onClick={() => handleRemoveItem(guitar.id)}>
                     <BsCartX size={20} className="text-red-700" />
                   </button>

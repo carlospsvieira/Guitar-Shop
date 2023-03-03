@@ -55,13 +55,18 @@ function Navbar() {
               >
                 Electric
               </Link>
-              <Link
-                to="/login"
-                onClick={handleNav}
-                className="login-btn text-lg"
-              >
-                Login
-              </Link>
+              {!user ? (
+                // checks if user exists, otherwise it won't show inside menu //
+                <Link
+                  to="/login"
+                  onClick={handleNav}
+                  className="login-btn text-lg"
+                >
+                  Login
+                </Link>
+              ) : (
+                ""
+              )}
             </div>
           </div>
         ) : (

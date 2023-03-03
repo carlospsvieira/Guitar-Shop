@@ -1,16 +1,32 @@
 import React from "react";
-import { TbCopyright } from "react-icons/tb";
+import {
+  TbCopyright,
+  TbBrandInstagram,
+  TbBrandFacebook,
+  TbBrandTwitter,
+  TbBrandLinkedin,
+} from "react-icons/tb";
 
 function Footer() {
   return (
     <footer className="bg-zinc-800 text-white px-4 mt-[8rem]">
       <div className="flex flex-wrap justify-start items-start py-10 gap-4 sm:justify-around">
-        <div className="flex flex-col gap-1">
+        <div className="gap-1">
           <span className="font-bold text-lg">Socials</span>
-          <span>Insta</span>
-          <span>Facebook</span>
-          <span>Twitter</span>
-          <span>LinkedIn</span>
+          <div className="flex gap-1">
+            <span>
+              <TbBrandInstagram size={25} />
+            </span>
+            <span>
+              <TbBrandFacebook size={25} />
+            </span>
+            <span>
+              <TbBrandTwitter size={25} />
+            </span>
+            <span>
+              <TbBrandLinkedin size={25} />
+            </span>
+          </div>
         </div>
         <div className="flex flex-col gap-1">
           <span className="font-bold text-lg">Address</span>

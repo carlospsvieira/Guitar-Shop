@@ -1,13 +1,16 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Context } from "../context/AddProvider";
 import { toast } from "react-toastify";
 
 function Login() {
   const { user, setUser } = useContext(Context);
+  const location = useLocation();
   const [password, setPassword] = useState("");
   const validPassword = password.length < Number("6");
   const navigate = useNavigate();
+
+  console.log(location.search);
 
   const handleClick = () => {
     localStorage.setItem("user", JSON.stringify(user));
@@ -21,7 +24,7 @@ function Login() {
 
   return (
     <div className="flex flex-col items-center justify-center gap-1 h-[50vh]">
-      <h1 className="text-center text-3xl mb-6">Login</h1>
+      <h1 className="text-center text-3xl my-6">Login</h1>
       <input
         type="email"
         name="email"
@@ -37,7 +40,7 @@ function Login() {
         placeholder="Password"
       />
       <span className="text-sm">email: adm@guitar-shop.com</span>
-      <span className="text-sm">password: 1234567</span>
+      <span className="text-sm">password: 00102056</span>
       <button
         onClick={handleClick}
         disabled={validPassword}

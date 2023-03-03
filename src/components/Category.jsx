@@ -6,7 +6,7 @@ function Category() {
   return (
     <section
       id="category"
-      className="flex flex-col items-center pt-[10rem] gap-16 h-screen bg-slate-100"
+      className="flex flex-col items-center pt-[10rem] gap-16 h-screen"
     >
       <div>
         <h1 className="text-5xl">Your choice is what makes us safe & sound.</h1>
