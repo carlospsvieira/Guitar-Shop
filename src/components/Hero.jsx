@@ -16,7 +16,7 @@ function Hero() {
           <p className="text-2xl font-[500] ml-[10%] sm:text-4xl">
             Guitars 20% OFF!
           </p>
-          <TbDiscount2 size={25} color="white"/>
+          <TbDiscount2 size={25} color="white" />
         </div>
       </div>
       <AnimationOnScroll animateIn="animate__fadeInLeft">

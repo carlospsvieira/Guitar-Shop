@@ -13,12 +13,12 @@ function Category() {
       </div>
       <AnimationOnScroll animateIn="animate__fadeIn">
         <div className="flex gap-8 category-btns">
-          <Link to="/acoustic" className="w-[fit-content]">
+          <Link to="acoustic" className="w-[fit-content]">
             <div className="acoustic-btn">
               <span>Acoustic</span>
             </div>
           </Link>
-          <Link to="/electric" className="w-[fit-content]">
+          <Link to="electric" className="w-[fit-content]">
             <div className="electric-btn">
               <span>Electric</span>
             </div>

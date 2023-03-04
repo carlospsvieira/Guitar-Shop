@@ -49,14 +49,14 @@ function Profile() {
       <h1 className="text-center text-4xl my-6">Profile</h1>
       <p className="text-xl">{user.email}</p>
       <h2 className="text-lg my-6">Your favorite guitars:</h2>
-      <div className="favorite-list h-[400px] rounded-sm">
+      <div className="favorite-list h-[400px] rounded-sm px-4">
         {empty ? (
           <p>You don't have any favorite guitars yet.</p>
         ) : (
           newList.map((guitar) => (
             <div
               key={guitar.id}
-              className="flex max-w-[500px] h-[100px] items-end justify-around p-4 gap-12 shadow-md"
+              className="flex max-w-[500px] h-[100px] items-end justify-between p-4 gap-12 shadow-md"
             >
               <img src={guitar.image} alt="" className="w-[70px]" />
               <Link to={`/${guitar.type}/${guitar.id}`}>

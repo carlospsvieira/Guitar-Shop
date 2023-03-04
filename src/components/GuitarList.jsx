@@ -11,11 +11,11 @@ function GuitarList({ brand }) {
 
   const filteredList = guitars.filter(
     (guitar) =>
-      guitar.brand === brand && guitar.type === location.pathname.substring(1)
+      guitar.brand === brand && guitar.type === location.pathname.substring(13)
   );
 
   const guitarList = guitars.filter(
-    (guitar) => guitar.type === location.pathname.substring(1)
+    (guitar) => guitar.type === location.pathname.substring(13)
   );
 
   return (

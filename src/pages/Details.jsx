@@ -7,7 +7,7 @@ import onSale from "../images/on-sale.jpg";
 
 function Details() {
   const location = useLocation();
-  const guitarId = location.pathname.split("/")[2];
+  const guitarId = location.pathname.split("/")[3];
   const guitar = guitars.find((guitar) => guitar.id === guitarId);
   return (
     <div className="flex flex-wrap justify-center gap-8">
@@ -22,7 +22,7 @@ function Details() {
         </div>
         <div>
           <Link
-            to="/cart"
+            to="/guitar-shop/cart"
             className="bg-zinc-800 text-center text-white text-sm rounded-md py-2 px-4"
           >
             Go to Cart

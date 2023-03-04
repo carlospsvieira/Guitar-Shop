@@ -42,14 +42,14 @@ function Navbar() {
 
             <div className="flex flex-col gap-4 text-lg mt-[25%] items-center">
               <Link
-                to="/acoustic"
+                to="/guitar-shop/acoustic"
                 onClick={handleNav}
                 className="login-btn text-lg"
               >
                 Acoustic
               </Link>
               <Link
-                to="/electric"
+                to="/guitar-shop/electric"
                 onClick={handleNav}
                 className="login-btn text-lg"
               >
@@ -58,7 +58,7 @@ function Navbar() {
               {!user ? (
                 // checks if user exists, otherwise it won't show inside menu //
                 <Link
-                  to="/login"
+                  to="/guitar-shop/login"
                   onClick={handleNav}
                   className="login-btn text-lg"
                 >
@@ -71,35 +71,35 @@ function Navbar() {
           </div>
         ) : (
           <div className="flex justify-around items-center bg-zinc-800 text-white w-full">
-            <Link to="/" className="text-3xl mr-5 flex items-center logo">
+            <Link to="/guitar-shop" className="text-3xl mr-5 flex items-center logo">
               <GiMusicSpell size={25} />{" "}
               <span className="ml-2">Guitar Shop</span>
             </Link>
 
             <div className="flex items-center gap-8">
-              <Link to="/acoustic" className="guitar-link text-lg">
+              <Link to="/guitar-shop/acoustic" className="guitar-link text-lg">
                 Acoustic
               </Link>
-              <Link to="/electric" className="guitar-link text-lg">
+              <Link to="/guitar-shop/electric" className="guitar-link text-lg">
                 Electric
               </Link>
 
-              {location.pathname === "/login" ? (
+              {location.pathname === "/guitar-shop/login" ? (
                 // Checks whether user is at the login page or not.
                 // if so, user cannot see links to login or profile pages //
                 ""
               ) : user && user.email.length > 0 ? (
                 // Checks if user is loggedin and display links //
-                <Link to="/profile">
+                <Link to="/guitar-shop/profile">
                   <CgProfile size={25} />
                 </Link>
               ) : (
-                <Link to="/login" className="login-btn text-lg login">
+                <Link to="/guitar-shop/login" className="login-btn text-lg login">
                   Login
                 </Link>
               )}
 
-              <Link to="/cart">
+              <Link to="/guitar-shop/cart">
                 <div className="flex">
                   {cart.length < 1 ? (
                     ""

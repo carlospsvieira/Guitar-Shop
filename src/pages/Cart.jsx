@@ -35,9 +35,9 @@ function Cart() {
   };
 
   const redirectCheckout = () => {
-    user && user.email.length > 0 ? navigate("/checkout") : navigate("/login");
+    user && user.email.length > 0 ? navigate("/guitar-shop/checkout") : navigate("/guitar-shop/login");
   };
-
+  
   useEffect(() => {
     handleCart();
   }, []);
