@@ -30,7 +30,7 @@ function Navbar() {
           <div className="flex flex-col w-full h-screen items-center">
             <div className="flex items-center mt-4">
               <Link
-                to="/"
+                to="/guitar-shop"
                 onClick={handleNav}
                 className="text-2xl flex items-center mr-[5rem]"
               >
