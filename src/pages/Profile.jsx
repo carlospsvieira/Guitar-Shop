@@ -36,7 +36,7 @@ function Profile() {
 
   const handleLogout = () => {
     localStorage.clear();
-    navigate("/");
+    navigate("/guitar-shop");
     location.reload(true);
   };
 
