@@ -1,16 +1,13 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../context/AddProvider";
 import { toast } from "react-toastify";
 
 function Login() {
   const { user, setUser } = useContext(Context);
-  const location = useLocation();
   const [password, setPassword] = useState("");
   const validPassword = password.length < Number("6");
   const navigate = useNavigate();
-
-  console.log(location.search);
 
   const handleClick = () => {
     localStorage.setItem("user", JSON.stringify(user));

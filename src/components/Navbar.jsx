@@ -30,7 +30,7 @@ function Navbar() {
           <div className="flex flex-col w-full h-screen items-center">
             <div className="flex items-center mt-4">
               <Link
-                to="/guitar-shop"
+                to="/"
                 onClick={handleNav}
                 className="text-2xl flex items-center mr-[5rem]"
               >
@@ -42,14 +42,14 @@ function Navbar() {
 
             <div className="flex flex-col gap-4 text-lg mt-[25%] items-center">
               <Link
-                to="/guitar-shop/acoustic"
+                to="/acoustic"
                 onClick={handleNav}
                 className="login-btn text-lg"
               >
                 Acoustic
               </Link>
               <Link
-                to="/guitar-shop/electric"
+                to="/electric"
                 onClick={handleNav}
                 className="login-btn text-lg"
               >
@@ -58,7 +58,7 @@ function Navbar() {
               {!user ? (
                 // checks if user exists, otherwise it won't show inside menu //
                 <Link
-                  to="/guitar-shop/login"
+                  to="/login"
                   onClick={handleNav}
                   className="login-btn text-lg"
                 >
@@ -71,16 +71,16 @@ function Navbar() {
           </div>
         ) : (
           <div className="flex justify-around items-center bg-zinc-800 text-white w-full">
-            <Link to="/guitar-shop" className="text-3xl mr-5 flex items-center logo">
+            <Link to="/" className="text-3xl mr-5 flex items-center logo">
               <GiMusicSpell size={25} />{" "}
               <span className="ml-2">Guitar Shop</span>
             </Link>
 
             <div className="flex items-center gap-8">
-              <Link to="/guitar-shop/acoustic" className="guitar-link text-lg">
+              <Link to="/acoustic" className="guitar-link text-lg">
                 Acoustic
               </Link>
-              <Link to="/guitar-shop/electric" className="guitar-link text-lg">
+              <Link to="/electric" className="guitar-link text-lg">
                 Electric
               </Link>
 
@@ -90,16 +90,16 @@ function Navbar() {
                 ""
               ) : user && user.email.length > 0 ? (
                 // Checks if user is loggedin and display links //
-                <Link to="/guitar-shop/profile">
+                <Link to="/profile">
                   <CgProfile size={25} />
                 </Link>
               ) : (
-                <Link to="/guitar-shop/login" className="login-btn text-lg login">
+                <Link to="/login" className="login-btn text-lg login">
                   Login
                 </Link>
               )}
 
-              <Link to="/guitar-shop/cart">
+              <Link to="/cart">
                 <div className="flex">
                   {cart.length < 1 ? (
                     ""

@@ -6,7 +6,7 @@ import { MdFavorite } from "react-icons/md";
 import CustomBtn from "../components/CustomBtn";
 
 function Profile() {
-  const { user, favorite, setFavorite, setCart } = useContext(Context);
+  const { user, favorite, setFavorite } = useContext(Context);
   const [empty, setEmpty] = useState(false);
   const navigate = useNavigate();
   const newList = guitars.filter((guitar) =>
@@ -36,7 +36,7 @@ function Profile() {
 
   const handleLogout = () => {
     localStorage.clear();
-    navigate("/guitar-shop");
+    navigate("/");
     location.reload(true);
   };
 

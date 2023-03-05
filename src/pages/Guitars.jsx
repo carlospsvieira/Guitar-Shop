@@ -6,7 +6,7 @@ function Guitars() {
   const location = useLocation();
   return (
     <div>
-      {location.pathname === "guitar-shop/acoustic" ? (
+      {location.pathname === "/acoustic" ? (
         <div>
           <h1 className="text-4xl text-center mt-6">Acoustic Guitars</h1>
         </div>

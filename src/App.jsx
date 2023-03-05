@@ -25,16 +25,16 @@ function App() {
         <ScrollToTop className="px-[5px]" />
         <ToastContainer limit={1} />
         <Routes>
-          <Route path="/guitar-shop" element={<Home />} />
-          <Route path="/guitar-shop/acoustic" element={<Guitars />} />
-          <Route path="/guitar-shop/electric" element={<Guitars />} />
-          <Route path="/guitar-shop/acoustic/:id" element={<Details />} />
-          <Route path="/guitar-shop/electric/:id" element={<Details />} />
-          <Route path="/guitar-shop/cart" element={<Cart />} />
-          <Route path="/guitar-shop/checkout" element={<Checkout />} />
-          <Route path="/guitar-shop/login" element={<Login />} />
-          <Route path="/guitar-shop/register" element={<Register />} />
-          <Route path="/guitar-shop/profile" element={<Profile />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/acoustic" element={<Guitars />} />
+          <Route path="/electric" element={<Guitars />} />
+          <Route path="/acoustic/:id" element={<Details />} />
+          <Route path="/electric/:id" element={<Details />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
