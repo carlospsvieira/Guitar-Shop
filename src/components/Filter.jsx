@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Context } from "../context/AddProvider";
 import { guitars } from "../data";
@@ -11,7 +11,7 @@ function Filter() {
 
   // it gets guitar list based on pathname (acoustic or electric) //
   const guitarList = guitars.filter(
-    (guitar) => guitar.type === location.pathname.substring(13)
+    (guitar) => guitar.type === location.pathname.substring(1)
   );
 
   location.pathname.substring(1)
@@ -24,11 +24,6 @@ function Filter() {
       setBrand(value);
       setFiltered(true);
     }
-  };
-
-  const switchGuitarType = () => {
-    setBrand("All");
-    setFiltered(false);
   };
 
   return (
