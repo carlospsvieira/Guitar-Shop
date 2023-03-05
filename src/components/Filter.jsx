@@ -14,8 +14,6 @@ function Filter() {
     (guitar) => guitar.type === location.pathname.split('/')[1]
   );
 
-  console.log(location.pathname.split('/')[1])
-
   const handleChange = ({ target }) => {
     const { value } = target;
     if (value === "All") {
