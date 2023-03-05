@@ -12,6 +12,6 @@ Add them to your cart, favorite some (favorites are in your profile page) for la
 - Tailwind CSS
 - Mocking a database with 24 different guitars, authentication and authorization all done in the client side.
 
-View this app live here https://carlospsvieira.github.io/medinfo
+View this app live here https://carlospsvieira.github.io/guitar-shop
 
 
