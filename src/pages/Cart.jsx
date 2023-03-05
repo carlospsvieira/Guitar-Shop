@@ -55,7 +55,7 @@ function Cart() {
                 Your cart is empty.
               </h2>
               <Link
-                to="/"
+                to="/guitar-shop"
                 className="bg-amber-600 text-white text-center text-lg py-2 rounded-sm"
               >
                 Start Shopping
