@@ -30,7 +30,7 @@ function Navbar() {
           <div className="flex flex-col w-full h-screen items-center">
             <div className="flex items-center mt-4">
               <Link
-                to="/guitar-shop"
+                to="/"
                 onClick={handleNav}
                 className="text-2xl flex items-center mr-[5rem]"
               >
@@ -71,7 +71,7 @@ function Navbar() {
           </div>
         ) : (
           <div className="flex justify-around items-center bg-zinc-800 text-white w-full">
-            <Link to="/guitar-shop" className="text-3xl mr-5 flex items-center logo">
+            <Link to="/" className="text-3xl mr-5 flex items-center logo">
               <GiMusicSpell size={25} />{" "}
               <span className="ml-2">Guitar Shop</span>
             </Link>
@@ -84,7 +84,7 @@ function Navbar() {
                 Electric
               </Link>
 
-              {location.pathname === "/guitar-shop/login" ? (
+              {location.pathname === "//login" ? (
                 // Checks whether user is at the login page or not.
                 // if so, user cannot see links to login or profile pages //
                 ""

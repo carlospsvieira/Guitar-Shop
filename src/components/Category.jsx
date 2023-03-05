@@ -8,7 +8,7 @@ function Category() {
     <Element name="category">
       <section className="flex flex-col items-center pt-[10rem] gap-16 h-screen">
         <div>
-          <h1 className="text-5xl">
+          <h1 className="text-2xl text-center sm:text-5xl">
             Your choice is what makes us safe & sound.
           </h1>
         </div>
