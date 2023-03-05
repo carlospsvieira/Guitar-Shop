@@ -25,7 +25,7 @@ function App() {
         <ScrollToTop className="px-[5px]" />
         <ToastContainer limit={1} />
         <Routes>
-          <Route path="/guitar-shop" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/acoustic" element={<Guitars />} />
           <Route path="/electric" element={<Guitars />} />
           <Route path="/acoustic/:id" element={<Details />} />
