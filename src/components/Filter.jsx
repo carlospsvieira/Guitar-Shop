@@ -11,8 +11,10 @@ function Filter() {
 
   // it gets guitar list based on pathname (acoustic or electric) //
   const guitarList = guitars.filter(
-    (guitar) => guitar.type === location.pathname.split("/")[2]
+    (guitar) => guitar.type === location.pathname.split('/')[1]
   );
+
+  console.log(location.pathname.split('/')[1])
 
   const handleChange = ({ target }) => {
     const { value } = target;

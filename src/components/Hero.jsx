@@ -1,5 +1,6 @@
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { Link } from 'react-scroll'
 import { TbDiscount2 } from "react-icons/tb";
 
 function Hero() {
@@ -20,21 +21,24 @@ function Hero() {
         </div>
       </div>
       <AnimationOnScroll animateIn="animate__fadeInLeft">
-        <a
-          href="#category"
-          className="bg-amber-600
-          py-3
-          px-10
-          rounded-md
-          text-white
-          text-center
-          text-2xl
-          font-[500]
-          ml-[10%]
-          "
-        >
-          <span>Start Shopping</span>
-        </a>
+      <Link
+        activeClass="active"
+        to="category"
+        spy={true}
+        duration={500}
+        className="bg-amber-600
+        py-3
+        px-10
+        rounded-md
+        text-white
+        text-center
+        text-2xl
+        font-[500]
+        ml-[10%]
+        "
+      >
+        Start Shopping
+        </Link>
       </AnimationOnScroll>
     </div>
   );
