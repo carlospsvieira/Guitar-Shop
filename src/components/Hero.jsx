@@ -35,6 +35,7 @@ function Hero() {
         text-2xl
         font-[500]
         ml-[10%]
+        cursor-pointer
         "
       >
         Start Shopping
