@@ -2,8 +2,8 @@
 
 #### Intro
 
-Welcome to my guitar shop, my passion translated to one of my favorite apps I've ever made. <br/>
-It's is indeed a shopping app for the nicest and favorite acoustic and electric guitars. <br />
+Welcome to my guitar shop, my passion translated into an application. <br/>
+It's indeed a shopping app with the nicest and my favorite acoustic and electric guitars. <br />
 Add them to your cart, favorite some (favorites are in your profile page) for later and check them out.
 
 #### Technologies:
