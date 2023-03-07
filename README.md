@@ -3,8 +3,8 @@
 #### Intro
 
 Welcome to my guitar shop, my passion translated into an application. <br/>
-It's indeed a shopping app with my favorite acoustic and electric guitars. <br />
-Add them to your cart, favorite some (favorites are in your profile page) for later and check them out.
+A shopping app with my favorite acoustic and electric guitars. <br />
+Add them to your cart, favorite some for later (favorites are in your profile page) and check them out.
 
 #### Technologies:
 - Vite.js (React)
