@@ -21,7 +21,7 @@ function Hero() {
         text-center
         text-xl
         font-[500]
-        ml-[4rem]
+        ml-[5.7rem]
         sm:ml-[10%]
         cursor-pointer
         px-[3rem]
