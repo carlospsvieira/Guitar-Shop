@@ -8,30 +8,31 @@ function Hero() {
       <h1 className="text-black text-[4rem] text-center sm:text-[12rem] sm:font-extralight mt-[10rem] sm:ml-[10%] sm:text-start">
         GUITARS
       </h1>
-      <AnimationOnScroll animateIn="animate__fadeInLeft">
-        <Link
-          activeClass="active"
-          to="category"
-          spy={true}
-          duration={500}
-          className="bg-amber-600
+      <div className="hero-btn">
+        <AnimationOnScroll animateIn="animate__fadeInLeft">
+          <Link
+            activeClass="active"
+            to="category"
+            spy={true}
+            duration={500}
+            className="bg-amber-600
         py-3
         rounded-md
         text-white
         text-center
         text-xl
         font-[500]
-        ml-[5.7rem]
         sm:ml-[10%]
         cursor-pointer
         px-[3rem]
         sm:px-[17.5rem]
         sm:text-2xl
         "
-        >
-          Start Shopping
-        </Link>
-      </AnimationOnScroll>
+          >
+            Start Shopping
+          </Link>
+        </AnimationOnScroll>
+      </div>
     </div>
   );
 }

@@ -96,6 +96,11 @@
     background-image: linear-gradient(#81818151, rgba(39, 39, 39, 0.281)) , url('https://images.pexels.com/photos/1010519/pexels-photo-1010519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   }
 
+  .hero-btn {
+    display: flex;
+    justify-content: center;
+  }
+
   .guitar-link {
     display: none;
   }
